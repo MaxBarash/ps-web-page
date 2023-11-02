@@ -1,0 +1,543 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/Kanit-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'CustomFont2';
+    src: url('../fonts/BebasNeue\ Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+a {
+    text-decoration: none
+}
+
+li,
+ol,
+ul {
+    list-style: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit
+}
+
+body,
+html {
+    background: #000000;
+    height: 100vh;
+    width: 100vw;
+    ;
+    line-height: 134px;
+    font-size: 90px;
+    font-family: 'CustomFont';
+    font-weight: 400;
+    font-style: normal;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 4;
+}
+
+.back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+.canvas_container {
+    position: fixed;
+    height: 100%;
+    top: 5%;
+    left: 2%;
+    z-index: 1;
+}
+
+#myCanvas {
+    border: 2px solid #eb7907;
+    height: 90%;
+    z-index: 2;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.ramka {
+    /* border: 3px solid #f0af09; */
+    width: 100%;
+    height: 100%;
+}
+
+.back p {
+    position: absolute;
+    bottom: -2px;
+    left: -10px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #fff;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'CustomFont2';
+    font-size: calc(100vw / 5.35);
+    line-height: calc(100vw / 7);
+    white-space: nowrap;
+    z-index: 2
+}
+
+.rectangle {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(89.09% 101.64% at 100% 107.93%, rgba(167, 4, 255, 0.7) 0%, rgba(66, 0, 255, 0.7) 100%);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    width: 45%;
+    height: 100vh;
+    z-index: 3;
+    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    padding: 87px 64px 0 0;
+    padding-bottom: calc(20px + 180 * (100vw / 1920))
+}
+
+.logo {
+    width: calc(20px + 130 * (100vw / 1920))
+}
+
+.rectangle p {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: end;
+    line-height: calc(5px + 65 * (100vw / 1920));
+    font-size: calc(5px + 85 * (100vw / 1920))
+}
+
+.rectangle p span {
+    color: #FF9000;
+    font-size: calc(6px + 40 * (100vw / 1920))
+}
+
+.btn {
+    border-radius: 15px;
+}
+
+.rectangle a {
+    display: block;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: calc(5px + 45 * (100vw / 1920));
+    font-size: calc(5px + 65 * (100vw / 1920));
+    padding: 32px 34px;
+    background: radial-gradient(157.99% 104.98% at 0% 37.58%, #FF9000 0%, #FF5900 100%);
+    border-radius: 15px;
+}
+
+.rectangle a:hover {
+    background: radial-gradient(157.99% 104.98% at 0% 37.58%, #FF9000 100%, #FF5900 0%);
+}
+
+.players {
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    left: 55%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    z-index: 4;
+}
+
+.players img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+@media (min-width: 1600px) {
+    .wrapper {
+        background: url(../images/bg.webp);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #myCanvas {
+        background: url(../images/descktop.webp);
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        background-position: top left;
+    }
+
+    .canvas_container {
+        height: 100%;
+        max-height: 68%;
+        bottom: 0%;
+        left: 2%;
+        top: 4%;
+    }
+
+    #myCanvas {
+        position: relative;
+        height: 100%;
+    }
+
+}
+
+@media (max-width:1600px) {
+    .wrapper {
+        background: url(../images/bg.webp);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .back {
+        background: url(../images/descktop.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top left;
+        position: absolute;
+        left: -20px;
+    }
+
+    .canvas_container {
+        height: 100%;
+        max-height: 64%;
+        bottom: 0%;
+        left: 2%;
+        top: 4%;
+    }
+
+    #myCanvas {
+        position: relative;
+        height: 100%;
+    }
+
+    .rectangle {
+        padding-bottom: 120px;
+    }
+
+    .rectangle p {
+        font-size: calc(5px + 75 * (100vw / 1920))
+    }
+}
+
+@media (max-width:1500px) {
+    .canvas_container {
+        height: 68%;
+    }
+}
+
+@media (max-width:1300px) {
+    #myCanvas {
+        background-position: bottom;
+        background-size: contain;
+    }
+
+    .canvas_container {
+        left: 36%;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0)
+    }
+}
+
+@media (min-width:912px) and (max-width:1024px) and (min-height:1024px) and (max-height:1368px) {
+    .wrapper {
+        background: url(../images/desc-bg-text.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .back {
+        width: 74%;
+        background: url(../images/NEW590x508.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
+        margin: 0 auto;
+    }
+
+    .logo {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        width: calc(50px + 160 * (100vw / 1920));
+        margin-right: 20px
+    }
+
+    .back p {
+        font-size: calc(73vh / 3.65);
+        line-height: calc(73vh / 4.5);
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        top: -5px;
+        left: -2px
+    }
+
+    .rectangle {
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        top: 47vh;
+        bottom: 0;
+        min-width: 100%;
+        height: 100%;
+        -webkit-clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 18%, 100% 0%, 100% 100%, 0% 100%);
+        padding: 30px 0 0 0;
+        z-index: 5;
+        -webkit-box-align: center;
+    }
+
+    .rectangle p {
+        text-align: center;
+        line-height: 66px;
+        font-size: 80px;
+        margin: 17% 0 8% 0
+    }
+
+    .rectangle p span {
+        font-size: 46px
+    }
+
+    .canvas_container {
+        height: 100%;
+        width: 100%;
+        position: inherit;
+
+        padding-block: 20% 20%;
+        left: 45%;
+        top: 8%;
+        rotate: -15deg;
+    }
+
+    #myCanvas {
+        height: 70%;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) and (min-height:770px) and (max-height:1366px) {
+    .logo {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        width: calc(50px + 160 * (100vw / 1920));
+        margin-right: 20px
+    }
+
+    .back p {
+        font-size: calc(73vh / 3.65);
+        line-height: calc(73vh / 4.5);
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        top: -5px;
+        left: -2px
+    }
+
+    .rectangle {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        top: 43vh;
+        bottom: 0;
+        width: 100%;
+        height: 57vh;
+        -webkit-clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+        padding: 30px 0 0 0;
+        padding-bottom: 0;
+        z-index: 5
+    }
+
+    .rectangle p {
+        text-align: center;
+        line-height: 60px;
+        font-size: 72px;
+        margin: 12% 0 8% 0
+    }
+
+    .rectangle p span {
+        font-size: 40px
+    }
+
+
+}
+
+@media (max-width:481px) {
+    .wrapper {
+        background: url(../images/bg2.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .logo {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        width: calc(50px + 160 * (100vw / 1920));
+        margin-right: 20px
+    }
+
+    .back p {
+        font-size: calc(73vh / 3.65);
+        line-height: calc(73vh / 4.5);
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        top: -5px;
+        left: -2px
+    }
+
+    .rectangle {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        top: 43vh;
+        bottom: 0;
+        width: 100%;
+        height: 57vh;
+        -webkit-clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+        padding: 30px 0 0 0;
+        padding-bottom: 0;
+        z-index: 5
+    }
+
+    .rectangle p {
+        text-align: center;
+        line-height: 42px;
+        font-size: 50px;
+        margin: 7% 0 5% 0
+    }
+
+    .rectangle p span {
+        font-size: 30px
+    }
+
+    .rectangle a {
+        padding: 20px 34px
+    }
+}
+
+@media (max-width:480px) {
+    .wrapper {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        background-image: url(/images/bg2.webp);
+        background-repeat: no-repeat;
+    }
+
+    .back p {
+        font-size: calc(70vh / 3.65);
+        line-height: calc(60vh / 5.1);
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        top: -15px;
+        left: -2px;
+        -webkit-text-stroke: 1px #fff
+    }
+
+    .logo {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        width: calc(50px + 160 * (100vw / 1920));
+        margin-right: 20px
+    }
+
+    .back {
+        height: 60%
+    }
+
+    .rectangle {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        top: 48%;
+        bottom: 0;
+        width: 100%;
+        height: 60%;
+        -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+        padding: 30px 0 0 0;
+        padding-bottom: 0;
+        z-index: 5
+    }
+
+    .rectangle p {
+        text-align: center;
+        line-height: 40px;
+        font-size: 48px;
+        margin: 13% 0 8% 0
+    }
+
+    .rectangle p span {
+        font-size: 26px
+    }
+
+    .rectangle a {
+        padding: 20px 34px
+    }
+
+    #myCanvas {
+        position: relative;
+        height: 50%;
+        bottom: 0px;
+        left: 8%;
+        top: 25%;
+        z-index: 2;
+        rotate: -15deg;
+    }
+}
