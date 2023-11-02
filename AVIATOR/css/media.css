@@ -154,10 +154,10 @@ html {
         background-position: top center;
     }
 
-    .back {
+    .top-box {
         background-image: url('/images/plashka1050x1165.webp');
         background-position: top right;
-        background-size: 45% 100%;
+        background-size: contain;
         background-repeat: no-repeat;
     }
 
@@ -207,48 +207,33 @@ html {
         background-repeat: no-repeat;
     }
 
-    .back {
-        background-image: url('/img/plashka&logo.png');
+    .top-box {
+        display: block;
+        background-image: url('');
         background-position: bottom right;
         background-size: cover;
     }
 
     .canvas_container {
-        /* background-image: url('/img/02.png'); */
-        background-image: url('/img/Top-360x690_2x.webp');
+        background-image: url('/img/146.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top center;
-        max-height: 60%;
+        max-height: 100%;
         min-height: 30%;
     }
-
     .button-box {
-        background-position: top right;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        max-width: 768px;
+        position: absolute;
+        top: 50%;
+        height: 50%;
         width: 100%;
-        max-height: 49%;
-        overflow: hidden;
-        z-index: 4;
     }
 
-    .top-box {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        min-height: 100%;
-        z-index: 3;
-        overflow: hidden;
-        z-index: -1;
+    .text p{
+        font-size: 30px;
+        margin-bottom: 15px;
     }
 }
-
-@media (max-width: 428px) {}
 
 @media (max-width: 360px) {
     .button-box {
@@ -265,18 +250,8 @@ html {
     }
 }
 
-@media (max-width: 320px) {
-    .button-box {
-        max-height: 40%;
-    }
-}
-
 @media screen and (min-width: 300px) and (max-width: 768px) {
-    .button-box {
-        position: absolute;
-        top: 50%;
-        height: 50%;
-    }
+    
 
     .canvas_container {
         width: 100%;
