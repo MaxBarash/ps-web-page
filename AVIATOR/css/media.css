@@ -139,6 +139,7 @@ html {
     border-radius: 8px;
     cursor: pointer;
 }
+
 @media(max-width: 1440px) {
     .wrapper {
         background-image: url('../img/BG.jpg');
@@ -146,12 +147,15 @@ html {
         background-size: cover;
         background-repeat: no-repeat;
     }
+
     .back {
         background-image: url('../images/1.2descktop.webp');
         background-position: bottom left;
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+    .canvas_container {}
 }
 
 @media (max-width:1024px) {}
