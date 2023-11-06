@@ -45,7 +45,7 @@ const animationDuration = 1e4;
 let progress = 0;
 const integralThreshold = 1e4
 	, image = new Image;
-image.src = "images/plain.webp";
+image.src = "img/plain.webp";
 const imageWidth = 230
 	, imageHeight = 200;
 
