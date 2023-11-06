@@ -199,7 +199,8 @@ html {
 
     .canvas_container {
         position: relative;
-        top: 175px;
+        top: 20%;
+        left: 20px;
         rotate: -11deg;
         display: flex;
         justify-content: left;
