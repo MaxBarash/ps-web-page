@@ -1,0 +1,303 @@
+.banner h1,
+.nav-menu-item a {
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal
+}
+
+.banner h1,
+.item_title {
+    text-transform: uppercase
+}
+
+.advertising_desc,
+.footer_menu,
+body {
+    font-family: Roboto
+}
+
+.footer_menu,
+.hero_banner,
+.menu,
+.row {
+    display: flex
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+img {
+    max-width: 100%
+}
+
+.hero_banner {
+    background: url('./img/first_baner.png') center center no-repeat #fff;
+    height: 100vh;
+    align-items: center;
+    justify-content: center
+}
+
+header {
+    padding-top: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+.menu {
+    gap: 20px 40px;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+    background: #000;
+}
+
+.nav-menu-item a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none
+}
+
+.banner h1,
+.banner_desc {
+    color: #2e2e2e;
+    text-align: center
+}
+
+.nav-menu-item a:hover {
+    color: #ff1e80
+}
+
+.container_l,
+.container_m,
+.container_s,
+.container_xl {
+    margin: 0 auto;
+    width: 1050px;
+    max-width: 90%
+}
+
+.container_m {
+    width: 1160px
+}
+
+.container_s {
+    width: 1275px
+}
+
+.container_xl {
+    width: 1660px
+}
+
+.banner {
+    padding: 65px 58px 64px;
+    border-radius: 12px;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(6px)
+}
+
+.banner h1 {
+    font-size: 40px
+}
+
+.banner_desc {
+    margin-top: 40px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px
+}
+
+.item_title,
+.row_item p {
+    font-size: 18px;
+    font-style: normal;
+    color: #2e2e2e
+}
+
+.row {
+    width: 100%;
+    gap: 60px
+}
+
+.section_padding {
+    padding: 100px 0
+}
+
+.item_title {
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 20px
+}
+
+.row_item:first-child {
+    width: 40%;
+    min-width: 40%
+}
+
+.row_item p {
+    font-weight: 400;
+    line-height: 26px
+}
+
+.advertising_title,
+.main_content h2 {
+    font-size: 34px;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-style: normal
+}
+
+.color_white {
+    color: #fff
+}
+
+.advertising_title {
+    color: #fff;
+    font-weight: 900
+}
+
+.advertising_desc {
+    color: #fff !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px
+}
+
+.full_bg {
+    background: url('./img/third_baner.png') left top no-repeat #fff;
+    align-items: center;
+    justify-content: center
+}
+
+.row_revers {
+    flex-direction: row-reverse
+}
+
+.main_content {
+    margin-top: 100px;
+}
+
+.main_content h2 {
+    font-weight: 500;
+    color: #2e2e2e;
+    text-align: center
+}
+
+.main_content p {
+    color: #2e2e2e;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 30px
+}
+
+.footer {
+    background: #000;
+    backdrop-filter: blur(6px);
+    padding: 30px 15px;
+}
+
+.footer_menu {
+    padding: 0 15px;
+    margin: 0;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.footer_menu_item a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none
+}
+
+@media screen and (max-width: 768px) {
+
+    .banner_desc,
+    .footer_menu_item a,
+    .nav-menu-item a {
+        font-size: 16px
+    }
+
+    .advertising_title,
+    .main_content {
+        margin-bottom: 20px
+    }
+
+    .banner,
+    .footer {
+        padding: 15px
+    }
+
+    .banner h1 {
+        font-size: 24px
+    }
+
+    .banner_desc {
+        margin-top: 20px
+    }
+
+    .section_padding {
+        padding: 30px 0
+    }
+
+    .row {
+        flex-wrap: wrap;
+        gap: 20px
+    }
+
+    .row_item,
+    .row_item:first-child {
+        width: 100%
+    }
+
+    .advertising_title {
+        font-size: 20px
+    }
+
+    .main_content h2 {
+        font-size: 22px
+    }
+
+    .main_content h2,
+    .main_content p {
+        margin-bottom: 15px
+    }
+}
+
+.content {
+    font-size: 22px
+}
+
+.content p {
+    margin-bottom: 15px
+}
+
+.content h2 {
+    margin-bottom: 25px
+}
+
+.faq {
+    border: 1px solid #00f
+}
+
+.nav_menu {
+    border: 1px solid black;
+}
+
+.ref_button {
+    border: 1px solid red;
+}
