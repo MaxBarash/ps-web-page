@@ -28,6 +28,10 @@ body {
     padding: 0
 }
 
+ul {
+    margin-inline-start: 1.5rem;
+}
+
 img {
     max-width: 100%
 }
