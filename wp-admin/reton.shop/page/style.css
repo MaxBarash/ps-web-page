@@ -33,13 +33,16 @@ img {
 }
 
 .hero_banner {
-    background: url('./img/first_baner.png') center center no-repeat #fff;
+    background: url('') center center no-repeat #fff;
     height: 100vh;
     align-items: center;
     justify-content: center
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 0px;
     position: absolute;
     top: 0;
@@ -48,6 +51,7 @@ header {
 }
 
 .menu {
+    display: flex;
     gap: 20px 40px;
     justify-content: center;
     padding-left: 15px;
@@ -55,11 +59,14 @@ header {
     padding-top: 15px;
     padding-bottom: 15px;
     flex-wrap: wrap;
-    background: #000;
+}
+
+footer .nav-menu-item a {
+    color: white;
 }
 
 .nav-menu-item a {
-    color: #fff;
+    color: #000;
     font-size: 24px;
     text-decoration: none
 }
@@ -71,16 +78,22 @@ header {
 }
 
 .nav-menu-item a:hover {
-    color: #ff1e80
+    color: #4300FE
 }
 
 .container_l,
 .container_m,
 .container_s,
+.container_xs,
 .container_xl {
     margin: 0 auto;
     width: 1050px;
-    max-width: 90%
+    max-width: 90%;
+    margin-bottom: 30px;
+}
+
+.container_xs {
+    width: 900px;
 }
 
 .container_m {
@@ -173,10 +186,8 @@ header {
     line-height: 24px
 }
 
-.full_bg {
-    background: url('../') left top no-repeat #fff;
-    align-items: center;
-    justify-content: center
+.barber_bg {
+    background: url('') center center no-repeat #fff;
 }
 
 .row_revers {
@@ -203,18 +214,18 @@ header {
     margin-bottom: 30px
 }
 
-.footer {
-    background: #000;
-    backdrop-filter: blur(6px);
-    padding: 30px 15px;
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4300FE;
+    padding: 0 15px;
 }
 
 .footer_menu {
     padding: 0 15px;
     margin: 0;
-    gap: 40px;
-    justify-content: center;
-    flex-wrap: wrap
+
 }
 
 .footer_menu_item a {
@@ -222,6 +233,16 @@ header {
     font-size: 24px;
     font-weight: 500;
     text-decoration: none
+}
+
+.logo {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.logo-white {
+    margin-left: 30px;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {

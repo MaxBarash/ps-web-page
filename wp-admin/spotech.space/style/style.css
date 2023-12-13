@@ -33,7 +33,7 @@ img {
 }
 
 .hero_banner {
-    background: url('./img/first_baner.png') center center no-repeat #fff;
+    background: url('../img/banner.png') center center no-repeat #fff;
     height: 100vh;
     align-items: center;
     justify-content: center
@@ -174,9 +174,10 @@ header {
 }
 
 .full_bg {
-    background: url('../') left top no-repeat #fff;
+    background: url('../img/banner_footer.png') left top no-repeat #fff;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    background-size: 100%;
 }
 
 .row_revers {

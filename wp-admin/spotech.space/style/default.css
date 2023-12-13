@@ -1,3 +1,41 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Roboto:wght@100;300;400;700;900&family=Young+Serif&display=swap);
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+header {
+    padding-top: 15px;
+}
+
+.container_fluid {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
 .banner h1,
 .nav-menu-item a {
     font-style: normal;
@@ -33,13 +71,17 @@ img {
 }
 
 .hero_banner {
-    background: url('./img/first_baner.png') center center no-repeat #fff;
+    background: url('../img/banner.png') center center no-repeat #fff;
     height: 100vh;
     align-items: center;
     justify-content: center
 }
 
-header {
+header,
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 0px;
     position: absolute;
     top: 0;
@@ -48,6 +90,7 @@ header {
 }
 
 .menu {
+    display: flex;
     gap: 20px 40px;
     justify-content: center;
     padding-left: 15px;
@@ -55,11 +98,10 @@ header {
     padding-top: 15px;
     padding-bottom: 15px;
     flex-wrap: wrap;
-    background: #000;
 }
 
 .nav-menu-item a {
-    color: #fff;
+    color: #000;
     font-size: 24px;
     text-decoration: none
 }
@@ -71,16 +113,22 @@ header {
 }
 
 .nav-menu-item a:hover {
-    color: #ff1e80
+    color: #4300FE
 }
 
 .container_l,
 .container_m,
 .container_s,
+.container_xs,
 .container_xl {
     margin: 0 auto;
     width: 1050px;
-    max-width: 90%
+    max-width: 90%;
+    margin-bottom: 30px;
+}
+
+.container_xs {
+    width: 900px;
 }
 
 .container_m {
@@ -173,10 +221,8 @@ header {
     line-height: 24px
 }
 
-.full_bg {
-    background: url('../') left top no-repeat #fff;
-    align-items: center;
-    justify-content: center
+.barber_bg {
+    background: url('') center center no-repeat #fff;
 }
 
 .row_revers {
@@ -203,18 +249,20 @@ header {
     margin-bottom: 30px
 }
 
-.footer {
-    background: #000;
-    backdrop-filter: blur(6px);
-    padding: 30px 15px;
+footer {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4300FE;
+    bottom: 0
 }
 
 .footer_menu {
     padding: 0 15px;
     margin: 0;
-    gap: 40px;
-    justify-content: center;
-    flex-wrap: wrap
+
 }
 
 .footer_menu_item a {
@@ -222,6 +270,16 @@ header {
     font-size: 24px;
     font-weight: 500;
     text-decoration: none
+}
+
+.logo {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.logo-white {
+    margin-left: 30px;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {

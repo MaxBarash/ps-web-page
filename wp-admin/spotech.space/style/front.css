@@ -1,0 +1,257 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Roboto:wght@100;300;400;700;900&family=Young+Serif&display=swap);
+* {
+	padding: 0px;
+	margin: 0px;
+}
+p {
+	margin-bottom: 15px;
+}
+ul {
+	padding-left:20px;
+}
+img {
+	max-width: 100%;
+}
+body {
+	font-family: 'Roboto';
+}
+
+header, .header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+header {
+	padding-top: 15px;
+}
+.container_fluid {
+	margin: 0 auto;
+	width: 90%;
+}
+.container {
+	width: 1200px;
+	max-width: 90%;
+	margin: 0 auto;
+}
+.container_l {
+	width: 1680px;
+	max-width: 90%;
+	margin: 0 auto;
+}
+.header_wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+.menu {
+	display: flex;
+	gap: 20px;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.nav-menu-item a {
+	text-decoration: none;
+	color: #2e2e2e;
+	font-size: 24px;
+}
+.banner {
+	width: 100%;
+	max-width: 100%;
+}
+.banner_wrapper {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+h2 {
+	text-align: center;
+	font-size: 34px;
+	color: #2e2e2e;
+}
+.advantage_wrapper {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	display: flex;
+	justify-content: center;
+}
+.advantage_item {
+	width: 425px;
+	max-width: 425px;
+	padding: 40px 35px 60px 35px;
+	background: #dff1f4;
+	color: #2e2e2e;
+	text-align: center;
+}
+.advantage_item:nth-child(even) {
+	background: #cde7eb;
+}
+.advantage_item_title {
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.content_banner_wrapper {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.row {
+	width: 100%;
+	gap: 60px;
+	display: flex;
+}
+.row_item:first-child {
+	width: 40%;
+	min-width: 40%;
+}
+.row_item:nth-child(2) {
+	flex-grow: 1;
+}
+.item_title {
+	font-weight: 500;
+	line-height: normal;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.item_title,
+.row_item p {
+	font-size: 18px;
+	font-style: normal;
+	color: #2e2e2e;
+}
+.row_revers {
+	flex-direction: row-reverse;
+}
+.desc_row {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+form {
+	width: 100%;
+}
+.input_row {
+	display: flex;
+	gap: 40px;
+	margin-bottom: 20px;
+}
+.input_wrapper {
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+}
+label {
+	width: 100%;
+	margin-bottom: 5px;
+}
+input {
+	width: 100%;
+	height: 35px;
+	border-radius: 3px;
+	border: 1px solid #eaeaea;
+	background: #f5f4f4;
+}
+.btn_send {
+	border-radius: 3px;
+	background: radial-gradient(230.05% 167.31% at 98.46% -34.96%, #00a5c9 0%, #009d9b 100%);
+	width: 218px;
+	height: 50px;
+	border: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+.footer {
+	background: #cde7eb;
+	padding-top: 40px;
+	padding-bottom: 60px;
+}
+.footer_wrapper {
+	display: flex;
+	gap: 40px;
+}
+.footer_item {
+	width: 33.3%;
+}
+.footer_item_title {
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+	.header_wrapper {
+		flex-wrap: wrap;
+	}
+	.logo {
+		width: 100%;
+		text-align: center;
+	}
+	.menu {
+		width: 100%;
+		justify-content: center;
+		position: static;
+		transform: translateY(0px);
+	}
+	h2 {
+		font-size: 22px;
+	}
+	.banner_wrapper {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.advantage_wrapper {
+		flex-wrap: wrap;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.advantage_item {
+		max-width: 100%;
+		padding: 15px 15px 20px;
+	}
+	.content_banner_wrapper {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.desc_row {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		flex-wrap: wrap;
+	}
+	.row_item:first-child {
+		width: 100%;
+	}
+	.row {
+		gap: 30px;
+	}
+	.btn_send {
+		width: 170px;
+		height: 40px;
+		display: block;
+		margin: auto;
+	}
+	.footer {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.footer_wrapper {
+		flex-wrap: wrap;
+	}
+	.footer_item {
+		width: 100%;
+	}
+}
